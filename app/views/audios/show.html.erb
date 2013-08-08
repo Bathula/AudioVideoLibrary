@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @audio.name %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+
+  <%=video_tag Audio.offset(2).limit(2).map(&:source), :controls => true,loop: true%>
+</p>
+
+<%= link_to 'Edit', edit_audio_path(@audio) %> |
+<%= link_to 'Back', audios_path %>
